@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #c0c86d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            margin-top: 3.7%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        img {
+            height: 40%;
+            width: 40%;
+            cursor: url('./mole/static/mole-game/cursor.png'), default;
+        }
+    </style>
+
+    <div class="wrapper">    
+        <img src="./mole/static/mole-game/win.png">
+    </div>
+    
+    <script>
+        const image = document.querySelector('img');
+        
+        image.addEventListener('click', function () {
+            location.href="index.html"
+        })
+    </script>
+</body>
+</html>
