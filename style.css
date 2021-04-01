@@ -3,14 +3,14 @@
 }
 
 html {
-    cursor: url('./mole/static/mole-game/cursor.png'), default;
+    cursor: url('./cursor.png'), default;
 }
 
 body {
-    background-image: url('./mole/static/mole-game/background.png');
+    background-image: url('./background.png');
     padding: 0;
     margin: 0;
-    cursor: url('./mole-game/cursor.png'), default;
+    cursor: url('./cursor.png'), default;
 }
 
 .progress-worm {
@@ -46,20 +46,20 @@ body {
 }
 
 .hungry {
-    content: url('./mole/static/mole-game/mole-hungry.png');
-    cursor: url('./mole/static/mole-game/cursor-worm.png'), default;
+    content: url('./mole-hungry.png');
+    cursor: url('./cursor-worm.png'), default;
 }
 
 .fed {
-    content: url('./mole/static/mole-game/mole-fed.png');
+    content: url('./mole-fed.png');
 }
 
 .sad {
-    content: url('./mole/static/mole-game/mole-sad.png');
+    content: url('./mole-sad.png');
 }
 
 .leaving {
-    content: url('./mole/static/mole-game/mole-leaving.png');
+    content: url('./mole-leaving.png');
 }
 
 .gone {
@@ -67,20 +67,20 @@ body {
 }
 
 .king-hungry {
-    content: url('./mole/static/mole-game/king-mole-hungry.png');
-    cursor: url('./mole/static/mole-game/cursor-worm.png'), default;
+    content: url('./king-mole-hungry.png');
+    cursor: url('./cursor-worm.png'), default;
 }
 
 .king-fed {
-    content: url('./mole/static/mole-game/king-mole-fed.png');
+    content: url('./king-mole-fed.png');
 }
 
 .king-sad {
-    content: url('./mole/static/mole-game/king-mole-sad.png');
+    content: url('./king-mole-sad.png');
 }
 
 .king-leaving {
-    content: url('./mole/static/mole-game/king-mole-leaving.png');
+    content: url('./king-mole-leaving.png');
 }
 
 .gone {
