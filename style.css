@@ -10,7 +10,7 @@ body {
     background-image: url('./mole/static/mole-game/background.png');
     padding: 0;
     margin: 0;
-    cursor: url('./mole/static/mole-game/cursor.png'), default;
+    cursor: url('./mole-game/cursor.png'), default;
 }
 
 .progress-worm {
