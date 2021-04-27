@@ -4,41 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Congratulations!</title>
 </head>
 <body>
     <style>
         body {
-            background-color: #c0c86d;
+            background-color: rgb(145, 203, 84);
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         .wrapper {
-            margin-top: 3.7%;
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: column wrap;
             justify-content: center;
             align-items: center;
             padding: 0;
         }
 
+        h1 {
+            font-family: 'Indie Flower', cursive;
+            color: rgb(254, 68, 65);
+            text-align: center;
+        }
+
         img {
             height: 40%;
             width: 40%;
-            cursor: url('./cursor.png'), default;
+            cursor: url('./mole-game/cursor.png'), default;
+        }
+
+        @media screen and (max-width: 1200px) {
+            img {
+                height: 60%;
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 660px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            img {
+                height: 90%;
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            img {
+                height: 80%;
+                width: 80%;
+            }
         }
     </style>
 
-    <div class="wrapper">    
+    <div class="wrapper">
+        <h1>CONGRATULATIONS! YOU WON!</h1>  
         <img src="./win.png">
     </div>
 
     <script>
+        console.log("This game was created as the final project of frontendmasters.com bootcamp, and was made for web. I made some modifications for mobile, but you should still play it on your PC. it's much more enjoyable!");
+        
         const image = document.querySelector('img');
         
         image.addEventListener('click', function () {
-            location.href="index.html"
+            location.href="index.html";
         })
     </script>
 </body>
