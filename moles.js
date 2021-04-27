@@ -61,7 +61,6 @@ function hungryToFed (random) {
         moleArray[random].classList.remove('sad');
     }
     
-    console.log("hungryToFed called");
     moleArray[random].classList.remove('hungry');
     moleArray[random].classList.add('fed');
     points++;
@@ -101,7 +100,6 @@ function kingFedtoLeaving (random) {
 
 let newInterval = setInterval(function () {
     let random = Math.floor(Math.random() * 8);
-    console.log(random);
     
     if ( Math.floor(Math.random() * 8) > 1 ) {
 
