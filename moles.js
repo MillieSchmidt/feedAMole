@@ -1,10 +1,8 @@
-console.log("This game was created as the final project of frontendmasters.com bootcamp, and was made for web. I made some modifications for mobile, but you should still play it on your PC. it's much more enjoyable!");
-
 const moleArray = document.querySelectorAll('.mole');
 const progressWorm = document.querySelector('.progress-worm');
 let points = 0;
 
-//functions called by newInterval
+// functions called by gameInterval
 
 function goneToHungry (random) {    
     moleArray[random].classList.remove('gone');
@@ -65,7 +63,7 @@ function hungryToFed (random) {
     moleArray[random].classList.add('fed');
     points++;
     if (points == 10) {
-        clearInterval(newInterval);
+        clearInterval(gameInterval);
         setTimeout(function () {
             location.href = "ending.html";
         }, 800);
@@ -83,7 +81,7 @@ function kingHungryToFed(random) {
     moleArray[random].classList.add('king-fed');
     points += 2;
     if (points >= 10) {
-        clearInterval(newInterval);
+        clearInterval(gameInterval);
         setTimeout(function () {
             location.href = "ending.html";
         }, 800);
@@ -96,9 +94,9 @@ function kingFedtoLeaving (random) {
     moleArray[random].classList.add('king-leaving');
 }
 
-// beginning of newInterval
+// beginning of gameInterval
 
-let newInterval = setInterval(function () {
+let gameInterval = setInterval(function () {
     let random = Math.floor(Math.random() * 8);
     
     if ( Math.floor(Math.random() * 8) > 1 ) {
@@ -187,6 +185,33 @@ let newInterval = setInterval(function () {
 
     moleArray[random].addEventListener('click', feedAMole);
             
-}, 4000) //end of interval newInterval
+}, 4000) //end of interval gameInterval
 
-//clearInterval(newInterval);
+//clearInterval(gameInterval);
+
+// "about" functions
+
+function showAbout() {
+    const show = document.querySelector('.about-this-project');
+    const modal = document.querySelector('.modal');
+    show.addEventListener('click', function() {
+        if (modal.classList.contains('hide')) {
+            modal.classList.remove('hide');
+        }
+        modal.classList.add('show');
+    })
+}
+
+function hideAbout() {
+    const hide = document.querySelector('.back-to-the-game');
+    const modal = document.querySelector('.modal');
+    hide.addEventListener('click', function() {
+        if (modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            modal.classList.add('hide');
+        }
+    })
+}
+
+showAbout();
+hideAbout();

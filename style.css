@@ -3,14 +3,21 @@
 }
 
 html {
-    cursor: url('./cursor.png'), default;
+    box-sizing: border-box;
+    direction: ltr;
 }
 
 body {
-    background-image: url('./background.png');
+    width: 100%;
+    min-height: 100vh;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-image: url('./background.png');
     cursor: url('./cursor.png'), default;
+    overflow-x: hidden;
 }
 
 .progress-worm {
@@ -83,6 +90,70 @@ body {
 
 .gone {
     opacity: 0;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    max-width: 80%;
+    width: 30rem;
+    padding: 3rem 3rem 1rem 3rem;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: none;
+    border-radius: 60px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    box-shadow: 0rem 1rem 2rem rgb(27, 27, 27, 0.8);
+    cursor: default;
+    line-height: 1.7rem;
+}
+
+.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hide {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-header {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.modal a {
+    color: royalblue;
+}
+
+.back-to-the-game {
+    margin-top: 3rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.7rem;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.about-this-project {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1300px) {
@@ -264,5 +335,21 @@ body {
 
     .mole {
         height: 6rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .modal {
+        padding: 1rem;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    .modal-header {
+        font-size: 0.4rem;
+    }
+
+    .back-to-the-game {
+        margin-top: 0;
     }
 }
